@@ -14,12 +14,7 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
 ));
 
 // database initialization
-$app['db'] = new \app\lib\MySQL([
-	"host" => 'localhost',
-	"username" => "pay",
-	"password" => "paypass",
-	"dbname" => "pay"
-]);
+$app['db'] = new \app\lib\MySQL(require APP_DIR . '/config/database.php');
 
 // app models loader
 $app['models'] = $app->protect(function ($modelName) use ($app) {
