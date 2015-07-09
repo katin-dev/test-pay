@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Просмотр платежей пользователя - Тестовое задание</title>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/ui-darkness/jquery-ui.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+        <style>
+            #SearchForm .form-group {
+                width:100%;
+            }
+            #SearchForm input[type="text"]{
+                width:80%
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Просмотр платежей пользователя</h1>
+            <form action="/user/payments/" class="form-inline" id="SearchForm">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="Начите вводить имя пользователя"/>
+                    <input type="hidden" name="id" value="" />
+                    <input type="submit" name="show_payments" value="Показать платежи" class="btn btn-success"/>
+                    <p class="help-block"></p>
+                </div>
+            </form>
+
+            <div id="Payments">
+
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="/js/md5.js"></script>
+        <script src="/js/app.js"></script>
+    </body>
+</html>
